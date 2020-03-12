@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Uniteller</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Start your project here-->  
+  <!-- <div style="height: 100vh"> -->
+    <div class="flex-center flex-column">
+      <div class="row">
+        <div class="col-12" style="padding-top: 300px">
+          <div class="info">
+            <a href="#!" class="info__link"><i class="icon icon-help-f"></i></a>
+            <div class="info__text">
+              <p>Вознаграждение, перечисляемое плательщиком, совершающим платеж при помощи банковских карт МИР, VISA или MasterCard с использованием настоящего сайта, за предоставление возможности совершения на сайте финансовых транзакций и обеспечении информационного взаимодействия между участниками расчетов (плательщиком, банком-эквайером, получателем денежных средств, держателем сайта) при обработке совершенного платежа. Совершая платеж, плательщик подтверждает свое добровольное согласие на перечисление сервисного сбора</p>
+            </div>
+          </div>
+          <h2>Онлайн пополнение</h2>
+          <h4>Онлайн пополнение</h4>
+          <p>Онлайн пополнение</p>
+        </div>
+        <div class="col-12 mb-5">
+          <form action="" class="my-4">
+            <div class="md-form md-form_custom">
+              <input type="number" id="form1" class="form-control">
+              <label for="form1">Номер карты</label>
+              <a class="clear-input"><i class="icon icon-cross-f"></i></a>
+              <span class="error-message"></span>
+            </div>
+            <a class="btn btn-custom-green loading">Отправить</a>
+          </form>
+          <div class="my-4">
+            <label class="custom-green-checkbox d-inline m-0">
+              <span>Test</span>
+              <input type="checkbox" name="dd">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-green-checkbox d-inline m-0">
+              <span>Test</span>
+              <input type="checkbox" name="dd">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="my-4">
+            <label class="custom-green-radio">
+              <span>Radio</span>
+              <input type="radio" checked="checked" name="test" value="1">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-green-radio">
+              <span>Radio</span>
+              <input type="radio" name="test" value="1">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="custom-multi-select">
+            <label for="monthList">Месяц</label>
+            <select id="monthList" name="month-list" value="" disabled>
+              <option value="0">Месяц</option>
+              <option value="1">Январь</option>
+              <option value="2">Февраль</option>
+              <option value="3">Март</option>
+              <option value="4">Апрель</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 mb-5">
+          <div class="payment-card">
+            <div class="payment-card__back">
+              <div class="payment-card__cvc">
+                <div class="md-form md-form_custom">
+                  <input type="password" id="cardCvc" class="form-control">
+                  <label for="cardCvc">CVC</label>
+                  <a class="clear-input"><i class="icon icon-cross-f"></i></a>
+                  <!-- <span class="error-message"></span> -->
+                </div>
+                <div class="info">
+                  <a href="#!" class="cvc-info">Что это?</a>
+                  <div class="info__text">
+                    <p>Три или четыре последние цифры на обратной стороне карты</p>
+                  </div>
+                </div>
+                <!-- <a href="#!" class="cvc-info">Что это?</a> -->
+              </div>
+            </div>
+            <div class="payment-card__front">
+              <div class="payment-card__number">
+                <div class="md-form md-form_custom">
+                  <input type="number" id="cardNo" class="form-control">
+                  <label for="cardNo">Номер карты</label>
+                  <!-- <a class="clear-input"><i class="icon icon-cross-f"></i></a> -->
+                  <!-- <span class="error-message"></span> -->
+                  <span class="payment-card__type" id="paymentCardType"></span>
+                </div>
+              </div>
+              <div class="payment-card__valid-thru">
+                <div class="md-form md-form_custom">
+                  <input type="number" id="cardMonth" class="form-control">
+                  <label for="cardMonth">Месяц</label>
+                  <a class="clear-input"><i class="icon icon-cross-f"></i></a>
+                  <!-- <span class="error-message"></span> -->
+                </div>
+                <span>/</span>
+                <div class="md-form md-form_custom">
+                  <input type="number" id="cardYear" class="form-control">
+                  <label for="cardYear">Год</label>
+                  <a class="clear-input"><i class="icon icon-cross-f"></i></a>
+                  <!-- <span class="error-message"></span> -->
+                </div>
+                <div class="payment-card__logo">
+                  <i class="icon icon-blank" id="paymentCardLogo"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  <!-- End your project here-->
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/uniteller/custom-multiselect.js"></script>
+  <script type="text/javascript" src="js/uniteller/form.js"></script>
+  <script type="text/javascript"></script>
+
+</body>
+</html>

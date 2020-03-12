@@ -1,0 +1,384 @@
+@import '../mixin';
+.payment {
+    &__input {
+        &_header {
+            display: flex;
+            width: 584px;
+            padding: 50px;
+            padding-left: 0;
+        }
+        &_logo {
+            margin-right: auto;
+        }
+        &_card-types {
+            display: flex;
+            align-items: flex-end;
+            img {
+                margin-right: 10px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+        &_content {
+            display: flex;
+        }
+        &_card {
+            width: 584px;
+            margin-right: 30px;
+            margin-bottom: 50px;
+            background: #FFFFFF;
+            border: 1px solid #E1E5E7;
+            box-sizing: border-box;
+            border-radius: 6px;
+            padding: 30px;
+            h2 {
+                margin-bottom: 20px;
+                font-weight: normal;
+                font-size: 38px;
+            }
+            .payment-card {
+                margin-bottom: 24px;
+            }
+            p {
+                &.subtitle {
+                    font-family:'Google Sans';
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 24px;
+                    /* identical to box height, or 150% */
+                    letter-spacing: 0.15px;
+                    color: #0B1C27;
+                    margin-bottom: 12px;
+                }
+            }
+            &_result-icon {
+                text-align: center;
+                margin-bottom: 30px;
+                .icon {
+                    display: inline-flex;
+                    font-size: 80px;
+                }
+            }
+        }
+        &_success {
+            &_text {
+                padding: 45px 0 30px;
+                border-bottom: 1px solid #E1E5E7;
+                p {
+                    font-family: 'Google Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 28px;
+                    /* or 156% */
+                    text-align: center;
+                    color: #9395A4;
+                    margin-bottom: 24px;
+                }
+            }
+            &_receipt {
+                padding-top: 30px;
+                ul {
+                    text-align: left;
+                    padding: 0 24px;
+                    margin-bottom: 30px;
+                    li {
+                        display: flex;
+                        font-family: 'Google Sans';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 120%;
+                        /* identical to box height, or 17px */
+                        margin-bottom: 16px;
+                        span {
+                            display: block;
+                            &:nth-child(1) {
+                                min-width: 193px;
+                                margin-right: 16px;
+                                color: #9395A4;
+                            }
+                            &:nth-child(2) {
+                                width: auto;
+                                color: #0B1C27;
+                            }
+                        }
+                    }
+                }
+                &_print {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $primary-green;
+                    .icon {
+                        font-size: 24px;
+                        display: inline-flex;
+                        margin-right: 10px;
+                    }
+                    span {
+                        font-family: 'Google Sans';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 120%;
+                        /* identical to box height, or 17px */
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+        &_error {
+            &_text {
+                p {
+                    font-family: 'Google Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 28px;
+                    /* or 156% */
+                    text-align: center;
+                    color: #9395A4;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        &_order {
+            &_info {
+                display: flex;
+                margin-bottom: 5px;
+            }
+            &_text {
+                margin-right: auto;
+                p {
+                    font-family: 'Google Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    /* identical to box height, or 150% */
+                    letter-spacing: 0.15px;
+                    color: #9395A4;
+                    margin-bottom: 15px;
+                    b {
+                        color: #0B1C27;
+                    }
+                }
+            }
+            &_icon {
+                width: 138px;
+                display: flex;
+                .icon {
+                    display: inline-flex;
+                    color: #9395A4;
+                    font-size: 32px;
+                    margin-right: 8px;
+                }
+                span {
+                    display: block;
+                    font-family: 'Google Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    // line-height: 120%;
+                    line-height: 17px;
+                    color: #9395A4;
+                }
+            }
+        }
+        &_email {
+            display: flex;
+            margin-bottom: 24px;
+            .md-form {
+                &_custom {
+                    margin: 0;
+                    margin-right: 16px;
+                    input {
+                        width: 284px;
+                    }
+                    span {
+                        &.error {
+                            position: absolute;
+                            // top: 100%;
+                            bottom: -20px;
+                        }
+                    }
+                }
+            }
+        }
+        &_other-payments {
+            display: flex;
+            justify-content: space-between;
+        }
+        &_security {
+            &_info {
+                width: 234px;
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+            }
+            &_logo {
+                margin-top: auto;
+                margin-bottom: 16px;
+            }
+            &_text {
+                p {
+                    font-family: 'Google Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    // line-height: 17px;
+                    line-height: 140%;
+                    color: #9395A4;
+                }
+                a {
+                    color: $primary-green;
+                }
+            }
+        }
+        &_banner {
+            margin-bottom: 50px;
+            &_sm {
+                display: none;
+            }
+        }
+    }
+}
+
+/*--------------------------------*/
+/* Payment page - Breakpoints */
+@media (max-width: 1600px) {}
+@media (max-width: 1500px) {}
+@media (max-width: 1400px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {
+    .payment {
+        &__input {
+            &_banner {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &_card {
+                width: 445px;
+            }
+            &_other-payments {
+                .btn {
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+            &_email {
+                flex-direction: column;
+                .md-form {
+                    &_custom {
+                        margin-right: 0;
+                        margin-bottom: 24px;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .payment {
+        &__input {
+            &_header {
+                width: 100%;
+                padding: 16px 0 20px 0;
+                flex-direction: column;
+            }
+            &_logo {
+                margin: auto;
+                margin-bottom: 16px;
+            }
+            &_card-types {
+                justify-content: center;
+            }
+            &_content {
+                flex-direction: column;
+            }
+            &_card {
+                width: 100%;
+                max-width: 340px;
+                margin: auto;
+                // margin-right: 0;
+                margin-bottom: 30px;
+                padding: 0;
+                border: none;
+                h2 {
+                    font-size: 28px;
+                }
+            }
+            &_security {
+                &_info {
+                    width: 100%;
+                }
+                &_text {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                &_logo {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        margin-right: 8px;
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            &_banner {
+                &_lg {
+                    display: none;
+                }
+                &_sm {
+                    display: block;
+                }
+            }
+            &_success {
+                &_text {
+                    padding: 10px 0 30px 0;
+                }
+                &_receipt {
+                    ul {
+                        padding: 0;
+                        li {
+                            span {
+                                &:nth-child(1) {
+                                    min-width: 160px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &_order {
+                &_icon {
+                    display: none;
+                }
+            }
+            &_other-payments {
+                flex-direction: column;
+                .btn {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px) {}
+@media (max-width: 379px) {}
+/* ./Payment page - Breakpoints */
+/*--------------------------------*/

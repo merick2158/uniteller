@@ -1,0 +1,129 @@
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/
+.btn.btn-spay, .btn.btn-ipay, .btn.btn-gpay {
+  border-radius: 6px;
+  width: 164px;
+  height: 62px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  box-shadow: none;
+}
+.btn.btn-custom-green {
+  background-color: #65B767;
+  border-radius: 6px;
+  padding: 19px 25px;
+  width: 145px;
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+  text-transform: unset;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.btn.btn-custom-green:hover, .btn.btn-custom-green:focus {
+  background-color: #88CE89;
+  box-shadow: none;
+}
+.btn.btn-custom-green:active {
+  background-color: #40A746;
+  box-shadow: none;
+}
+.btn.btn-custom-green.disabled {
+  background-color: #E1E5E7;
+  color: #9395A4;
+}
+.btn.btn-custom-green.disabled:not([href]):not([tabindex]) {
+  color: #9395A4;
+}
+.btn.btn-custom-green.loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  z-index: 1;
+}
+.btn.btn-custom-green.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #40A746;
+}
+.btn.btn-gpay {
+  background: #FFFFFF;
+  border: 0.5px solid #CFD5DA;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04);
+}
+.btn.btn-ipay {
+  background: #000000;
+}
+.btn.btn-spay {
+  background: #034EA2;
+}
+.btn.btn-custom-outlined {
+  background: #FFFFFF;
+  border: 0.5px solid #CFD5DA;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  /* identical to box height, or 133% */
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #0B1C27;
+  mix-blend-mode: normal;
+  text-transform: unset;
+  margin: 0;
+  padding: 19px 16px;
+  width: 224px;
+}
+
+/*--------------------------------*/
+/* Buttons Css - Breakpoints */
+@media (max-width: 991px) {
+  .btn.btn-gpay, .btn.btn-ipay, .btn.btn-spay {
+    margin-right: 15px;
+  }
+  .btn.btn-gpay img, .btn.btn-ipay img, .btn.btn-spay img {
+    max-width: 90px;
+  }
+}
+/* ./Buttons Css - Breakpoints */
+/*--------------------------------*/
+
+/*# sourceMappingURL=buttons.css.map */

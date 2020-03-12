@@ -1,0 +1,94 @@
+@import '../mixin';
+/* Green checkbox */
+.custom-green-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-break: break-all;
+    span {
+        &.checkmark-text {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+            letter-spacing: 0.15px;
+            color: #0B1C27;
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked {
+            ~ .checkmark {
+                background-color: $primary-green;
+                border: 2px solid $primary-green;
+                border-radius: 3px;
+                &::after {
+                    // display: block;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -9px;
+        height: 18px;
+        width: 18px;
+        border: 2px solid #DADADA;
+        border-radius: 3px;
+        @include transition-all(.2);
+        &::after {
+            font-family: "uniteller" !important;
+            font-size: 13px;
+            content: "\68";
+            color: #ffffff;
+            position: absolute;
+            // display: none;
+            opacity: 0;
+            top: 1px;
+            left: 0;
+            @include transition-all(.3);
+        }
+        &.colors {
+            height: 40px;
+            width: 40px;
+            border-color: transparent;
+            &::after {
+                content: '';
+                display: block;
+                border-radius: 3px;
+                height: 34px;
+                width: 34px;
+            }
+        }
+    }
+    &:hover {
+        input {
+            ~ .checkmark {
+                background-color: lighten(#DADADA, 10%);
+            }
+            &:checked {
+                ~ .checkmark {
+                    background-color: $primary-green;
+                    &::after {
+                        color: lighten($primary-green, 35%);
+                    }
+                }
+            }
+        }
+    }
+}
+/* ./Green checkbox */

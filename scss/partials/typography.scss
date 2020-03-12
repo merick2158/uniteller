@@ -1,0 +1,100 @@
+@import '../mixin';
+h2 {
+    font-family: 'Graphik LCG';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    /* identical to box height, or 48px */
+}
+h4 {
+    font-family: Graphik LCG;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+}
+p {
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+}
+a {
+    color: #dfdfe4;
+    &:hover {
+        color: #92929D;
+    }
+}
+
+// Text Colors
+.custom-green-text {
+    color: $primary-green;
+}
+.custom-red-text {
+    color: #DD5656;
+}
+
+.info {
+    position: relative;
+    &__text {
+        width: 320px;
+        position: absolute;
+        left: -152px;
+        right: 0;
+        bottom: 45px;
+        // margin: auto;
+        background-color: #464748;
+        color: #ffffff;
+        padding: 12px;
+        border-radius: 13px;
+        @include box-shadow(0,0,10,.2);
+        &::after {
+            font-family: "uniteller" !important;
+            content: '\69';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 36px;
+            height: 36px;
+            color: #464748;
+            font-size: 36px;
+            // @include box-shadow(0,0,10,.2);
+        }
+        p {
+            font-family: Google Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            /* or 133% */
+            letter-spacing: 0.4px;
+            color: #E1E5E7;
+            mix-blend-mode: normal;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/*--------------------------------*/
+/* Typography - Breakpoints */
+@media (max-width: 1600px) {}
+@media (max-width: 1500px) {}
+@media (max-width: 1400px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {}
+@media (max-width: 767px) {
+    h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+@media (max-width: 575px) {}
+@media (max-width: 379px) {}
+/* ./Typography - Breakpoints */
+/*--------------------------------*/

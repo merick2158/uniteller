@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "uniteller";
+  src:url("fonts/uniteller.eot");
+  src:url("fonts/uniteller.eot?#iefix") format("embedded-opentype"),
+    url("fonts/uniteller.woff") format("woff"),
+    url("fonts/uniteller.ttf") format("truetype"),
+    url("fonts/uniteller.svg#uniteller") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "uniteller" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "uniteller" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\61";
+}
+.icon-chevron-up:before {
+  content: "\62";
+}
+.icon-cross-f:before {
+  content: "\63";
+}
+.icon-help-f:before {
+  content: "\64";
+}
+.icon-help-o:before {
+  content: "\65";
+}
+.icon-magnifier:before {
+  content: "\66";
+}
+.icon-trash:before {
+  content: "\67";
+}
+.icon-check:before {
+  content: "\68";
+}
+.icon-info-arrow:before {
+  content: "\69";
+}
+.icon-alfabank:before {
+  content: "\6b";
+}
+.icon-otkritiebank:before {
+  content: "\6c";
+}
+.icon-lock:before {
+  content: "\6d";
+}
+.icon-check-o:before {
+  content: "\6e";
+}
+.icon-cross-o:before {
+  content: "\6f";
+}
+.icon-sberbank:before {
+  content: "\70";
+}
+.icon-printer:before {
+  content: "\6a";
+}

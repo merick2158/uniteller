@@ -1,0 +1,106 @@
+@import '../mixin';
+
+%formFontStyle {
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.15px;
+}
+.md-form {
+    &_custom {
+        color: #0B1C27;
+        input {
+            @extend %formFontStyle;
+            width: 259px;
+            &[type="number"] {
+                -moz-appearance:textfield;
+            }
+            &[type="text"],
+            &[type="password"],
+            &[type="email"],
+            &[type="number"] {
+                &:not(.browser-default) {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding: 18px 40px 18px 16px;
+                    border: 1px solid #E1E5E7;
+                    box-sizing: border-box;
+                    border-radius: 6px;
+                    caret-color: $primary-green;
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+                    &:focus {
+                        &:not([readonly]){
+                            border-color: $primary-green;
+                            box-shadow: none;
+                            padding: 26px 40px 10px 16px;
+                            &+label {
+                                color: #9395A4;
+                            }
+                        }
+                    }
+                    &.active {
+                        padding: 26px 40px 10px 16px;
+                        &.not-valid {
+                            border-color: $primary-red;
+                        }
+                    }
+                    &.error {
+                        border-color: $primary-red;
+                    }
+                }
+            }
+        }
+        label {
+            @extend %formFontStyle;
+            color: #9395A4;
+            left: 16px;
+            top: 11px;
+            line-height: 1;
+            margin-bottom: 0;
+            &.active {
+                top: 20px;
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+        a {
+            &.clear-input {
+                position: absolute;
+                // top: calc(50% - 8px);
+                top: 23px;
+                right: 16px;
+                color: #dfdfe4;
+                opacity: 0;
+                @include transition-all(.2);
+                .icon {
+                    display: inline-flex;
+                    font-size: 16px;
+                }
+                &.active {
+                    opacity: 1;
+                    &:hover {
+                        color: #92929D;
+                    }
+                }
+            }
+        }
+        span {
+            &.error {
+                font-family: 'Google Sans';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                // line-height: 120%;
+                line-height: 17px;
+                color: $primary-red;
+            }
+        }
+    }
+}

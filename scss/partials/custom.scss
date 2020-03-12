@@ -1,0 +1,77 @@
+@import '../mixin';
+.custom-container {
+    width: 878px;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+body {
+    min-width: 375px;
+}
+.payment {
+    &__mainpage {
+        text-align: center;
+        padding-top: 20px;
+        &_logo {
+            padding: 60px 0 37px 0;
+            text-align: center;
+        }
+        &_text {
+            h2 {
+                color: #ffffff;
+                font-weight: normal;
+                width: 400px;
+                margin: auto;
+                margin-bottom: 24px;
+            }
+            p {
+                color: rgba(255,255,255,.5);
+                margin-bottom: 36px;
+            }
+            .btn {
+                &.btn-custom-green {
+                    width: auto;
+                    padding: 19px 34px;
+                }
+            }
+        }
+    }
+}
+.bg-black {
+    background-color: #000000;
+}
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+@media (max-width: 1600px) {}
+@media (max-width: 1500px) {}
+@media (max-width: 1400px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {
+    .custom-container {
+        width: 720px;
+    }
+    .payment {
+        &__mainpage {
+            &_banner {
+                img {
+                    width: 100%;
+                }
+            }
+            &_text {
+                h2 {
+                    width: 100%;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .custom-container {
+        width: 100%;
+    }
+}
+@media (max-width: 575px) {}
+@media (max-width: 379px) {}
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/

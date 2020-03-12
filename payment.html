@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Uniteller - Payment</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="payment__input">
+    <div class="custom-container">
+      <div class="payment__input_header">
+        <div class="payment__input_logo">
+          <img src="img/logo/logo_black_text.svg" alt="">
+        </div>
+        <div class="payment__input_card-types">
+          <img src="img/card-types/mir.svg" alt="">
+          <img src="img/card-types/visa.svg" alt="">
+          <img src="img/card-types/maestro.svg" alt="">
+          <img src="img/card-types/masterc.svg" alt="">
+        </div>
+      </div>
+      <div class="payment__input_content">
+        <form action="" id="paymentInfo" method="post">
+          <div class="payment__input_card">
+          <h2>Оплата: 404,00 ₽</h2>
+          <div class="payment__input_order_info">
+            <div class="payment__input_order_text">
+              <p><b>Магазин: </b>Социальная карта</p>
+              <p><b>Номер заказа: </b>6378209463</p>
+            </div>
+            <div class="payment__input_order_icon">
+              <i class="icon icon-lock"></i>
+              <span>Безопасная форма оплаты</span>
+            </div>
+          </div>
+          <div class="payment-card">
+            <div class="payment-card__back">
+              <div class="payment-card__cvc">
+                <div class="md-form md-form_custom">
+                  <input type="password" name="cvc" id="cardCvc" class="form-control" maxlength="3">
+                  <label for="cardCvc">CVC</label>
+                  <!-- <a class="clear-input"><i class="icon icon-cross-f"></i></a> -->
+                  <!-- <span class="error-message"></span> -->
+                </div>
+                <div class="info">
+                  <a href="#!" class="cvc-info">Что это?</a>
+                  <div class="info__text">
+                    <p>Три или четыре последние цифры на обратной стороне карты</p>
+                  </div>
+                </div>
+                <!-- <a href="#!" class="cvc-info">Что это?</a> -->
+              </div>
+            </div>
+            <div class="payment-card__front">
+              <div class="payment-card__number">
+                <div class="md-form md-form_custom">
+                  <input type="number" name="cardnumber" id="cardNo" class="form-control" maxlength="16">
+                  <label for="cardNo">Номер карты</label>
+                  <!-- <a class="clear-input"><i class="icon icon-cross-f"></i></a> -->
+                  <!-- <span class="error-message"></span> -->
+                  <span class="payment-card__type" id="paymentCardType"></span>
+                  <div class="payment-card__saved" id="savedCards">
+                    <div class="payment-card__saved_card">
+                      <a class="payment-card__saved_card-number" cardno="1234567890901234">
+                        <span>1234 56** **** 3456</span>
+                        <img src="img/card-types/masterc.svg" alt="">
+                      </a>
+                      <a href="#!" class="delete-item">
+                        <i class="icon icon-trash"></i>
+                      </a>
+                    </div>
+                    <div class="payment-card__saved_card">
+                      <a class="payment-card__saved_card-number" cardno="0987654321901234">
+                        <span>1234 56** **** 3456</span>
+                        <img src="img/card-types/visa.svg" alt="">
+                      </a>
+                      <a href="#!" class="delete-item">
+                        <i class="icon icon-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-card__valid-thru">
+                <div class="md-form md-form_custom">
+                  <input type="number" name="month" id="cardMonth" class="form-control" maxlength="2">
+                  <label for="cardMonth">Месяц</label>
+                  <!-- <a class="clear-input"><i class="icon icon-cross-f"></i></a> -->
+                  <!-- <span class="error-message"></span> -->
+                </div>
+                <span>/</span>
+                <div class="md-form md-form_custom">
+                  <input type="number" name="year" id="cardYear" class="form-control" maxlength="4">
+                  <label for="cardYear">Год</label>
+                  <!-- <a class="clear-input"><i class="icon icon-cross-f"></i></a> -->
+                  <!-- <span class="error-message"></span> -->
+                </div>
+                <div class="payment-card__logo">
+                  <i class="icon icon-blank" id="paymentCardLogo"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label class="custom-green-checkbox">
+            <span class="checkmark-text">Запомнить карту</span>
+            <input type="checkbox" name="dd">
+            <span class="checkmark"></span>
+          </label>
+          <p class="subtitle">Отправить чек на Email</p>
+          <div class="payment__input_email">
+            <div class="md-form md-form_custom">
+              <input type="email" name="email" id="form1" class="form-control">
+              <label for="form1">Email</label>
+              <a class="clear-input"><i class="icon icon-cross-f"></i></a>
+              <!-- <span class="error-message"></span> -->
+            </div>
+            <button type="submit" id="payNow" class="btn btn-custom-green w-100">Оплатить</button>
+            <!-- <input id="payNow" class="btn btn-custom-green w-100" type="submit" value="Оплатить"> -->
+          </div>
+          <p class="subtitle" id="otherPaymentsText">Другие способы оплаты</p>
+          <div class="payment__input_other-payments">
+            <a href="#!" id="gpay" class="btn btn-gpay"><img src="img/other-payments/GPay.svg" alt=""></a>
+            <a href="#!" id="ipay" class="btn btn-ipay"><img src="img/other-payments/iPay.svg" alt=""></a>
+            <a href="#!" id="spay" class="btn btn-spay"><img src="img/other-payments/sPay.svg" alt=""></a>
+          </div>
+          </div>
+        </form>
+        <div class="payment__input_security_info">
+          <div class="payment__input_security_logo">
+            <img src="img/security/visa.png" alt="">
+            <img src="img/security/mastercard.png" alt="">
+            <img src="img/security/pci.png" alt="">
+            <img src="img/security/mir.png" alt="">
+          </div>
+          <div class="payment__input_security_text">
+            <p>В системе Uniteller безопасность платежей и конфиденциальность введенной Вами информации обеспечивается использованием протокола TLS и другими специальными средствами. Ваша конфиденциальная информация хранится исключительно нами и ни при каких обстоятельствах не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством.</p>
+            <p>В случае возникновения вопросов Вы можете обратиться в Службу поддержки компании Uniteller по телефону 8 800 707-67-19 или электронной почте <a href="mailto:support@uniteller.ru">support@uniteller.ru</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="payment__input_banner">
+        <img class="payment__input_banner_lg" src="img/banners/banner-lg.png" alt="">
+        <img class="payment__input_banner_sm" src="img/banners/banner-sm.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/uniteller/custom-multiselect.js"></script>
+  <script type="text/javascript" src="js/uniteller/form.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/uniteller/common.js"></script>
+  <script type="text/javascript"></script>
+
+</body>
+</html>

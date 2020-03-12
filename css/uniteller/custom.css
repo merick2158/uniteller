@@ -1,0 +1,67 @@
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/
+.custom-container {
+  width: 878px;
+  margin: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+body {
+  min-width: 375px;
+}
+
+.payment__mainpage {
+  text-align: center;
+  padding-top: 20px;
+}
+.payment__mainpage_logo {
+  padding: 60px 0 37px 0;
+  text-align: center;
+}
+.payment__mainpage_text h2 {
+  color: #ffffff;
+  font-weight: normal;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 24px;
+}
+.payment__mainpage_text p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 36px;
+}
+.payment__mainpage_text .btn.btn-custom-green {
+  width: auto;
+  padding: 19px 34px;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+@media (max-width: 991px) {
+  .custom-container {
+    width: 720px;
+  }
+
+  .payment__mainpage_banner img {
+    width: 100%;
+  }
+  .payment__mainpage_text h2 {
+    width: 100%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .custom-container {
+    width: 100%;
+  }
+}
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/
+
+/*# sourceMappingURL=custom.css.map */

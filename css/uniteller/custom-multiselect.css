@@ -1,0 +1,126 @@
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/
+.custom-multi-select {
+  position: relative;
+  color: #9395A4;
+}
+.custom-multi-select.selected {
+  color: #0B1C27;
+}
+.custom-multi-select.selected label {
+  display: block;
+}
+.custom-multi-select.selected .select-selected {
+  padding: 26px 40px 10px 16px;
+}
+.custom-multi-select label {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #9395A4;
+  z-index: 1;
+}
+.custom-multi-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+.custom-multi-select .select-selected {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E1E5E7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 259px;
+  padding: 18px 40px 18px 16px;
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+.custom-multi-select .select-selected:after {
+  content: "a";
+  font-family: "uniteller" !important;
+  font-size: 8px;
+  line-height: 1;
+  color: #000000;
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.custom-multi-select .select-selected:hover, .custom-multi-select .select-selected.select-arrow-active {
+  background: #FBFBFB;
+  border: 1px solid #E1E5E7;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.custom-multi-select .select-selected.select-arrow-active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.custom-multi-select .select-selected.select-arrow-active:after {
+  transform: rotate(-180deg);
+}
+.custom-multi-select .select-items {
+  display: table;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 259.5px;
+  padding: 12px 0;
+  background-color: #ffffff;
+  border: 1px solid #E1E5E7;
+  border-top: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 99;
+}
+.custom-multi-select .select-items div {
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: #9395A4;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 15px;
+  padding-right: 40px;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+.custom-multi-select .select-items div:hover, .custom-multi-select .select-items div.same-as-selected {
+  background-color: #FBFBFB;
+  color: #000000;
+}
+.custom-multi-select .select-items div.same-as-selected {
+  background-color: #FBFBFB;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none !important;
+}
+
+/*# sourceMappingURL=custom-multiselect.css.map */

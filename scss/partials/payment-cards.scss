@@ -1,0 +1,386 @@
+@import '../mixin';
+%cardCommon {
+    border: 1px solid #E1E5E7;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 32px 24px;
+    width: 386px;
+    height: 228px;
+}
+%cardTypeCommon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 36px;
+    position: absolute;
+    top: 19px;
+    right: 16px;
+}
+.payment-card {
+    $self:&;
+    position: relative;
+    &__front {
+        position: relative;
+        background-color: #F3F5F7;
+        @extend %cardCommon;
+        // z-index: 1;
+        @include transition-all(.5);
+        &.sberbank {
+            background-color: #2F9A41;
+            color:#E1E5E7;
+            .md-form {
+                &_custom {
+                    .error-message {
+                        color:#E1E5E7;
+                    }
+                    input {
+                        &.active {
+                            &.not-valid {
+                                // border-color: #E1E5E7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.alfabank {
+            background-color: #EF3124;
+            color:#E1E5E7;
+            .md-form {
+                &_custom {
+                    .error-message {
+                        color:#E1E5E7;
+                    }
+                    input {
+                        &.active {
+                            &.not-valid {
+                                border-color: #E1E5E7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.otkritiebank {
+            background-color: #00B2E1;
+            color:#E1E5E7;
+            .md-form {
+                &_custom {
+                    .error-message {
+                        color:#E1E5E7;
+                    }
+                    input {
+                        &.active {
+                            &.not-valid {
+                                border-color: #E1E5E7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.tinkoffbank {
+            background-color: #0B1C27;
+            color:#E1E5E7;
+            .md-form {
+                &_custom {
+                    .error-message {
+                        color:#E1E5E7;
+                    }
+                    input {
+                        &.active {
+                            &.not-valid {
+                                border-color: #E1E5E7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.blank {
+            background-color: #2F9A41;
+            color:#E1E5E7;
+            .md-form {
+                &_custom {
+                    .error-message {
+                        color:#E1E5E7;
+                    }
+                    input {
+                        &.active {
+                            &.not-valid {
+                                border-color: #E1E5E7;
+                            }
+                        }
+                    }
+                }
+            }
+            #{ $self }__logo {
+                border: 1px dashed #FFFFFF;
+                box-sizing: border-box;
+                border-radius: 6px;
+                &::after {
+                    content: 'Логотип банка';
+                    font-family: Google Sans;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 18px;
+                    /* or 129% */
+                    text-align: center;
+                    letter-spacing: 0.15px;
+                    color: #E1E5E7;
+                    mix-blend-mode: normal;
+                }
+            }
+        }
+    }
+    &__back {
+        background: #E7E9EC;
+        @extend %cardCommon;
+        position: absolute;
+        top: 0;
+        left: 138px;
+        // z-index: 0;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 0;
+            height: 62px;
+            width: 100%;
+            background-color: #CFD1D4;
+        }
+    }
+    &__number {
+        .md-form {
+            margin: 0;
+            margin-bottom: 40px;
+            &_custom {
+                input {
+                    width: 100%;
+                    background-color: #ffffff!important;
+                }
+                // .error-message {
+                //     position: absolute;
+                //     left: 0;
+                //     bottom: -25px;
+                // }
+                span {
+                    &.error {
+                        display: none!important;
+                    }
+                }
+            }
+        }
+    }
+    &__type {
+        &.visa {
+            background-image: url('../../img/card-types/visa.svg');
+            @extend %cardTypeCommon;
+        }
+        &.mir {
+            background-image: url('../../img/card-types/mir.svg');
+            @extend %cardTypeCommon;
+        }
+        &.maestro {
+            background-image: url('../../img/card-types/maestro.svg');
+            @extend %cardTypeCommon;
+        }
+        &.masterc {
+            background-image: url('../../img/card-types/masterc.svg');
+            @extend %cardTypeCommon;
+        }
+    }
+    &__saved {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: calc(100% + 15px);
+        @include box-shadow(0,0,8,.2);
+        border-radius: 6px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            // width: 0px;
+            // height: 0px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #ffffff;
+        }
+        &_card {
+            display: flex;
+            padding: 12px 16px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #CFD1D4;
+            @include transition-all(.3);
+            &:hover {
+                background-color: #FBFBFB;
+            }
+            span {
+                font-family: 'Google Sans';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height, or 150% */
+                letter-spacing: 0.15px;
+                color: #0B1C27;
+            }
+            img {
+                height: 19px;
+                width: auto;
+            }
+            &:first-of-type {
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+            &:last-of-type {
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                border-bottom: none;
+            }
+        }
+        &_card-number {
+            display: flex;
+            align-items: center;
+            width: 92%;
+            span {
+                margin-right: auto;
+            }
+        }
+        a {
+            &.delete-item {
+                width: 8%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                .icon {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+    &__valid-thru {
+        display: flex;
+        align-items: center;
+        span {
+            margin: 0 8px;
+        }
+        .md-form {
+            margin: 0;
+            height: 62px;
+            &_custom {
+                input {
+                    width: 106px;
+                    background-color: #ffffff!important;
+                }
+                span {
+                    &.error {
+                        display: none!important;
+                    }
+                }
+            }
+        }
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 86px;
+        height: 62px;
+        margin-left: 16px;
+        .icon {
+            font-size: 50px;
+            color: #ffffff;
+            display: inline-flex;
+            &.icon-tinkoffbank {
+                background-image: url('../../img/icons/tinkoff.svg');
+                background-size: contain;
+                height: 60px;
+                width: 67px;
+                display: block;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    &__cvc {
+        position: absolute;
+        bottom: 6px;
+        right: 24px;
+        .md-form {
+            margin: 0;
+            height: 62px;
+            &_custom {
+                input {
+                    width: 90px;
+                    background-color: #ffffff!important;
+                }
+                span {
+                    &.error {
+                        display: none!important;
+                    }
+                }
+            }
+        }
+        a {
+            font-family: Google Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+            letter-spacing: 0.4px;
+            color: #9395A4;
+            mix-blend-mode: normal;
+            &.active {
+                color: #0B1C27;
+            }
+        }
+        .info {
+            z-index: 1;
+            &__text {
+                display: none;
+                width: 190px;
+                left: -72px;
+                bottom: 35px;
+            }
+            &:hover {
+                .info__text {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+/*--------------------------------*/
+/* Payment Cards Css - Breakpoints */
+@media (max-width: 1600px) {}
+@media (max-width: 1500px) {}
+@media (max-width: 1400px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {
+    %cardCommon {
+        width: 320px;
+    }
+    .payment-card {
+        height: 330px;
+        &__back {
+            top: 100px;
+            left: 25px;
+        }
+    }
+}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}
+@media (max-width: 379px) {}
+/* ./Payment Cards Css - Breakpoints */
+/*--------------------------------*/

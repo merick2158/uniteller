@@ -1,0 +1,30 @@
+$primary-green: #65B767;
+$primary-red: #DD5656;
+$primary-gray: #9395A4;
+$light-gray: #E1E5E7;
+
+@mixin transition-all($t) {
+    -webkit-transition: all #{$t}s ease-out;
+    -moz-transition: all #{$t}s ease-out;
+    -o-transition: all #{$t}s ease-out;
+    transition: all #{$t}s ease-out;
+}
+
+@mixin box-shadow($x, $y, $z, $n) {    
+    box-shadow: #{$x}px #{$y}px #{$z}px rgba(0, 0, 0, $n)!important;
+    -moz-box-shadow: #{$x}px #{$y}px #{$z}px rgba(0, 0, 0, $n)!important;
+    -webkit-box-shadow: #{$x}px #{$y}px #{$z}px rgba(0, 0, 0, $n)!important;
+}
+
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+@media (max-width: 1600px) {}
+@media (max-width: 1500px) {}
+@media (max-width: 1400px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}
+@media (max-width: 379px) {}
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/

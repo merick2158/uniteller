@@ -1,0 +1,101 @@
+/*--------------------------------*/
+/* Custom Css - Breakpoints */
+/* ./Custom Css - Breakpoints */
+/*--------------------------------*/
+h2 {
+  font-family: "Graphik LCG";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  /* identical to box height, or 48px */
+}
+
+h4 {
+  font-family: Graphik LCG;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 120%;
+  /* or 25px */
+}
+
+p {
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+}
+
+a {
+  color: #dfdfe4;
+}
+a:hover {
+  color: #92929D;
+}
+
+.custom-green-text {
+  color: #65B767;
+}
+
+.custom-red-text {
+  color: #DD5656;
+}
+
+.info {
+  position: relative;
+}
+.info__text {
+  width: 320px;
+  position: absolute;
+  left: -152px;
+  right: 0;
+  bottom: 45px;
+  background-color: #464748;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 13px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+}
+.info__text::after {
+  font-family: "uniteller" !important;
+  content: "i";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  color: #464748;
+  font-size: 36px;
+}
+.info__text p {
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+  letter-spacing: 0.4px;
+  color: #E1E5E7;
+  mix-blend-mode: normal;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------*/
+/* Typography - Breakpoints */
+@media (max-width: 767px) {
+  h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+/* ./Typography - Breakpoints */
+/*--------------------------------*/
+
+/*# sourceMappingURL=typography.css.map */
