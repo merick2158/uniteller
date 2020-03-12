@@ -1,2 +1,2 @@
 # uniteller
-Unitelle Payment page - sass, js
+Uniteller Payment page - sass, js
