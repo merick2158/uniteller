@@ -104,3 +104,40 @@
         }
     }
 }
+@media (max-width: 575px) {
+    .md-form {
+        &_custom {
+            input {
+                &[type="text"],
+                &[type="password"],
+                &[type="email"],
+                &[type="number"] {
+                    &:not(.browser-default) {
+                        padding: 10px 16px;
+                        &:focus {
+                            &:not([readonly]){
+                                padding: 10px 16px;
+                                &+label {
+                                    color: #9395A4;
+                                }
+                            }
+                        }
+                        &.active {
+                            padding: 10px 16px;
+                            &.not-valid {
+                                border-color: $primary-red;
+                            }
+                        }
+                    }
+                }
+            }
+            label {
+                top: 3px;
+                font-size: 14px;
+                &.active {
+                    top: 12px;
+                }
+            }
+        }
+    }
+}

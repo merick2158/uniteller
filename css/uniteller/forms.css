@@ -93,4 +93,29 @@
   color: #DD5656;
 }
 
+@media (max-width: 575px) {
+  .md-form_custom input[type=text]:not(.browser-default), .md-form_custom input[type=password]:not(.browser-default), .md-form_custom input[type=email]:not(.browser-default), .md-form_custom input[type=number]:not(.browser-default) {
+    padding: 10px 16px;
+  }
+  .md-form_custom input[type=text]:not(.browser-default):focus:not([readonly]), .md-form_custom input[type=password]:not(.browser-default):focus:not([readonly]), .md-form_custom input[type=email]:not(.browser-default):focus:not([readonly]), .md-form_custom input[type=number]:not(.browser-default):focus:not([readonly]) {
+    padding: 10px 16px;
+  }
+  .md-form_custom input[type=text]:not(.browser-default):focus:not([readonly]) + label, .md-form_custom input[type=password]:not(.browser-default):focus:not([readonly]) + label, .md-form_custom input[type=email]:not(.browser-default):focus:not([readonly]) + label, .md-form_custom input[type=number]:not(.browser-default):focus:not([readonly]) + label {
+    color: #9395A4;
+  }
+  .md-form_custom input[type=text]:not(.browser-default).active, .md-form_custom input[type=password]:not(.browser-default).active, .md-form_custom input[type=email]:not(.browser-default).active, .md-form_custom input[type=number]:not(.browser-default).active {
+    padding: 10px 16px;
+  }
+  .md-form_custom input[type=text]:not(.browser-default).active.not-valid, .md-form_custom input[type=password]:not(.browser-default).active.not-valid, .md-form_custom input[type=email]:not(.browser-default).active.not-valid, .md-form_custom input[type=number]:not(.browser-default).active.not-valid {
+    border-color: #DD5656;
+  }
+  .md-form_custom label {
+    top: 3px;
+    font-size: 14px;
+  }
+  .md-form_custom label.active {
+    top: 12px;
+  }
+}
+
 /*# sourceMappingURL=forms.css.map */

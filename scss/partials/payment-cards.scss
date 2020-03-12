@@ -377,10 +377,69 @@
             top: 100px;
             left: 25px;
         }
+        &__logo {
+            width: 100%;
+            margin-left: 10px;
+            .icon {
+                font-size: 34px;
+            }
+        }
+        &__valid-thru,
+        &__cvc {
+            .md-form {
+                input {
+                    width: 70px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 767px) {}
-@media (max-width: 575px) {}
+@media (max-width: 575px) {
+    %cardCommon {
+        width: 270px;
+        height: 180px;
+    }
+    %cardTypeCommon {
+        top: 11px;
+        right: 8px;
+    }
+    .payment-card {
+        &__number {
+            .md-form {
+                margin-bottom: 20px;
+            }
+        }
+        &__valid-thru,
+        &__cvc {
+            .md-form {
+                height: 46px;
+            }
+        }
+        &__cvc {
+            .info {
+                &__text {
+                    left: -90px;
+                }
+            }
+        }
+        &__logo {
+            margin-left: 5px;
+            width: 50px;
+            height: 46px;
+        }
+        &__front {
+            &.blank {
+                .payment-card__logo {
+                    &::after {
+                        font-size: 10px;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 379px) {}
 /* ./Payment Cards Css - Breakpoints */
 /*--------------------------------*/

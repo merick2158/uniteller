@@ -284,6 +284,7 @@
   .payment__input_security_logo {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .payment__input_security_logo img {
     margin-right: 8px;

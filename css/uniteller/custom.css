@@ -10,7 +10,7 @@
 }
 
 body {
-  min-width: 375px;
+  min-width: 320px;
 }
 
 .payment__mainpage {
@@ -59,6 +59,21 @@ body {
 @media (max-width: 767px) {
   .custom-container {
     width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .payment__mainpage_logo {
+    padding: 20px 0;
+  }
+  .payment__mainpage_text h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .payment__mainpage_text p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
 }
 /* ./Custom Css - Breakpoints */

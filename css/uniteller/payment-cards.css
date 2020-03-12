@@ -311,6 +311,46 @@
     top: 100px;
     left: 25px;
   }
+  .payment-card__logo {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .payment-card__logo .icon {
+    font-size: 34px;
+  }
+  .payment-card__valid-thru .md-form input, .payment-card__cvc .md-form input {
+    width: 70px;
+  }
+}
+@media (max-width: 575px) {
+  .payment-card__front, .payment-card__back {
+    width: 270px;
+    height: 180px;
+  }
+
+  .payment-card__type.visa, .payment-card__type.mir, .payment-card__type.maestro, .payment-card__type.masterc {
+    top: 11px;
+    right: 8px;
+  }
+
+  .payment-card__number .md-form {
+    margin-bottom: 20px;
+  }
+  .payment-card__valid-thru .md-form, .payment-card__cvc .md-form {
+    height: 46px;
+  }
+  .payment-card__cvc .info__text {
+    left: -90px;
+  }
+  .payment-card__logo {
+    margin-left: 5px;
+    width: 50px;
+    height: 46px;
+  }
+  .payment-card__front.blank .payment-card__logo::after {
+    font-size: 10px;
+    line-height: 1.2;
+  }
 }
 /* ./Payment Cards Css - Breakpoints */
 /*--------------------------------*/
